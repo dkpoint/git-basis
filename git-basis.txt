@@ -1,0 +1,49 @@
+Git Basis
+
+    @ Set up
+        # Git Configuration
+            + See all the Config
+                git config --list  #Show all the settings in gitconfig
+            + Open config to edit
+                git config --global -e  #Open .gitconfig file
+            + User settings
+                git config --global user.name "name"  #Set user.name
+                git config --global user.email "email"  #Set user.email
+                git config user.name  #Check user.name
+                git config user.email  #Check user.email
+            + Set Auto CRLF
+                git config --global core.autocrlf true  #For Windows
+                git config --global core.autocrlf input  #For Mac
+            + Set default push branch name
+                git config --global push.default current
+            + Set pull option Rebase
+                git config --global pull.rebase true
+            + Git Aliases
+                git config --global alias.co checkout
+                git config --global alias.br branch
+                git config --global alias.ci commit
+                git config --global alias.st status
+            + Shell Command Install ‘code’
+                In Visual Studio Code :
+                Command + Shift + P
+                Shell Command: install 'code' command in PATH
+            + Set default editor(Visual Studio Code) for git
+                git config --global core.editor "code --wait"
+                code .  #Open current folder with editor
+            + Set default Diff Tool(Visual Studio Code) for git
+                git config --global diff.tool vscode
+                git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
+            + Set default Git History Format
+                git config --global alias.history "log --graph --all --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(white)%s %C(bold red){%an}%C(reset) %C(blue)%d%C(reset)' --date=short"
+            + Set default Merge Tool(Visual Studio Code) for git
+                git config --global merge.tool 'vscode'
+                git config --global mergetool.vscode.cmd 'code --wait $MERGED'
+                git config --global mergetool.keepBackup false  #Not generate .orig files
+
+        # Help
+            + Reference
+                Git : https://git-scm.com/docs
+            + See Help
+                git config --help   #Detail
+                git config -h   #Short
+        
